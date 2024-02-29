@@ -29,8 +29,9 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and don't use a cv template
-\documentclass[10pt,A4]{article}
+\documentclass[11pt,A4]{article}
 
+%\linespread{1.3}
 
 %----------------------------------------------------------------------------------------
 %	ENCODING
@@ -476,13 +477,31 @@
             \vfill\null
             \cvsection{PROFILE}
 
-            \cvtext{Thomas Han is a Head of Engineering with a focus on creating performant, resilient, scalable software solutions, demonstrating significant expertise in full-stack development.\\
+            \cvtext{As a seasoned IT professional, I bring a wealth of experience and a unique approach to software development and team leadership.
+            My philosophies are founded on collaboration, pragmatism, and continuous improvement.\\
 
-            His leadership at Adnuntius led to notable improvements in system performance and efficiency, especially in high-throughput, low-latency environments.\\
+            \textbf{Technical Leadership:}
+            \cvlist{
+                \item Expert knowledge in event-based architectures, concurrency, distributed systems and domain-driven design. For me, these components are important for building resilient, maintainable, and scalable software.
+                \item Egoless Approach: I believe in fostering a collaborative environment where ideas flow freely, regardless of hierarchy. My focus is on creating robust solutions rather than personal ego.
+                \item Pragmatic Decision-Making: When faced with complex choices, I weigh practicality and long-term impact. My decisions are grounded in real-world considerations.
+                \item Merit-Based Ideation: I champion ideas based on their merit, encouraging innovation and creativity within the team.
+            }
 
-            Thomas has applied his skills across diverse sectors, optimising system functionalities while ensuring data security.\\
+            \textbf{People-Centric Leadership:}
+            \cvlist{
+                \item Empathy-Driven Leadership: I lead, mentor, and coach with empathy, understanding that successful teams thrive when individuals feel heard, valued, and supported.
+                \item Open Dialogue Advocate: Honest discussions are essential for growth. I foster an environment where team members can openly share their perspectives.
+                \item Tech Debt Management: Recognising the balance between speed and quality, I know when to refactor code to reduce technical debt.
+            }
 
-            Committed to innovation and the open-source community, he blends technical knowledge with strategic insight, fostering team environments that encourage creativity.}
+            \textbf{Ideal Work Environment:}
+            \cvlist{
+                \item Collaborative Spaces: I thrive in open, collaborative environments where cross-functional teams work together seamlessly.
+                \item Self-Management: I appreciate self-driven teams that take ownership of their work, allowing for efficient execution.
+                \item Continuous Learning: I’m passionate about staying up-to-date with industry trends and technologies.
+            }
+            }
 
 %---------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -497,7 +516,9 @@
             {Adnuntius is an AdTech SaaS company that offers products such as Self-Service, Marketplace, Ad Server, and Data to publishers and ad buyers.
             Founded in 2016, Adnuntius enables better control, insight, and flexibility for its customers, as well as next generation advertising without relying on third party data.
             Adnuntius is headquartered in Oslo, Norway with the R\&D centre based in Melbourne.
-            The ad server handles over 12 billion requests per month, with high availability and low latency}
+            As a product based company, Adnuntius received NOK70m in funding from private equity firms and NOK2m from Digital Europe Programme.
+            The ad server handles over 12 billion requests per month, with high availability and low latency.
+            With the team size of six I was reponsible for leading the engineering practice.}
             {\cvlist{
                 \item Full-stack development across the Adnuntius products (Ad Server, Data analysis, AI, SRE, Performance, DevOps)
                 \item Architecting and implementing new features and optimising existing ones
@@ -510,19 +531,18 @@
                 \item Java 17 for majority of the backend
                 \item AngularJS for the frontend
                 \item Kafka and reactive microservices for high-throughput and low-latency backend
-                \item Ansible/bash + Gitlab for 1-click deployments
-                \item Docker local developments and CI/CD
-                \item Python for system tests
-                \item Hybrid AWS/Hetzner for cloud infrastructure
-                \item Kubernetes for container orchestration
-                \item Hugging face for AI models
+                \item 1-click deployments
+                \item Containerised local and CI/CD environments
+                \item High test coverage from unit level to system level
+                \item Hybrid cloud infrastructure
+                \item State of the art AI models for page semantics and ad matching
             }}
             {\cvlist{
-                \item Improved SQL queries by as much as 95\% by careful SQL query planning and denormalisation
-                \item Improved throughput by 50\% by utilising concurrency much as possible in the critical areas
+                \item Improved SQL queries by as much as 95\% by careful SQL query planning and denormalisation which lead to client reports and ad-hoc stats queries to be delivered on time in a timely manner
+                \item Improved throughput by 50\% by utilising concurrency much as possible in the critical areas maximising server utilisation and reducing server costs by 20\%
                 \item Improved ad matching by utilising semantic page matching and AI models
-                \item Improved system reliability by implementing monitoring and alerting systems in all mission critical areas
-                \item Achieved true CD with multiple deployments per day and automated rollbacks
+                \item Improved system reliability by implementing monitoring and alerting systems in all mission critical areas allowing proactive remediation before the major incidents which allowed the system have an uptime of 99.99\%
+                \item Achieved true CD with multiple deployments per day and automated rollbacks allowing quick turn around for new features and bug fixes
             }}
 
             \vfill\null
@@ -531,20 +551,15 @@
             {eFX Engineer @ ANZ}
             {Ultra-low latency trading platform}
             {Responsible for architecting and implementing event based trading platform while ensuring ultra-low latency and high-throughput was achieved.
-            Managed the CI/CD process across multiple teams in the eFX domain.}
+            Managed the CI/CD process across multiple teams in the eFX domain.
+            With a CapEx of \$30m+ allocated to implement ever decreasing latency and increasing throughput and OpEx of \$15m the eFX platform is one ANof the most relied upon trading platforms both internally and externally.
+            There were three squads each sized 6-8. My core responsibilities were with the pricing team, with the DevOps responsibility spanning across all three teams.}
             {\cvlist{
                 \item Extend existing pricing and trading systems to support new events
                 \item Develop and profile garbage-free trading systems in Java
                 \item Maintain and improve existing CI/CD pipeline
             }}
-            {\cvlist {
-                \item Java 8
-                \item Ultra Messaging
-                \item KDB
-                \item Chronicle
-                \item Ansible
-                \item Docker
-            }}
+            {}
             {\cvlist{
                 \item Uplifted the DevOps capability across multiple teams using Docker and Ansible
                 \item Migrated the entire QA environment into AWS
@@ -557,18 +572,14 @@
             {Senior Solution Designer @ nabtrade}
             {Financial trading platform}
             {Responsible for designing the integration of Cash Manager Account (CMA) in nabtrade with various third-party vendors such as FNZ, IRESS and SecuritEase.
-            As the lead solution designer, I worked closely with a team of BAs to work out the business requirements and come up with fully functioning software designs for the business requirements.}
+            This was a circa \$13m program to integrate with the CMA with an expected return of \$30m over 10 years.
+            As the lead solution designer, I worked closely with a team of four BAs to work out the business requirements and come up with fully functioning software designs for the business requirements.}
             {\cvlist{
                 \item Design and document the integration of nabtrade with third-party vendors, and between the third-party vendors
                 \item Lead a team of BAs to flush out the requirements
                 \item Make POC for the integration
             }}
-            {\cvlist {
-                \item Spring boot
-                \item Kafka
-                \item SOAP
-                \item IRESS, FNZ and SecuritEase
-            }}
+            {}
             {\cvlist{
                 \item Completed the design for locking funds in the CMA account and integrated with the third-party vendor
             }}
@@ -613,22 +624,15 @@
             {Oct 2016 - Jun 2017}
             {Big Data Architect / Engineer @ Telstra}
             {Insights Project - Big Data Platform}
-            {Responsible for implementing algorithms in Spark to uncover insights into people movements in the telco network.}
+            {Responsible for implementing algorithms in Spark to uncover insights into people movements in the telco network.
+            The core team size was 10-12 with a mixture of Data Engineers, Data Scientists, and Software Engineers, with the wider plaform and infrastructure team at the size of 20-25.}
             {\cvlist{
                 \item Implementing algorithms in Spark and uncovering insights using data analysis tools in Zeppelin
                 \item Architecting and building the data pipeline for efficient data processing of huge datasets
                 \item Architecting and building the data privacy and security frameworks for data protection, both for in transit and at rest data
                 \item Building streaming data pipelines for real-time data processing using Nifi and Spark Streaming
             }}
-            {\cvlist {
-                \item Scala
-                \item Spark
-                \item Hadoop
-                \item Hive
-                \item YARN
-                \item Kafka, Zookeeper
-                \item Nifi
-            }}
+            {}
             {}
 
             \vfill\null
@@ -636,20 +640,13 @@
             {Dec 2015 - Oct 2016}
             {Lead Software Engineer @ NAB}
             {E301 Service Engine - Banking API}
-            {Responsible for leading a squad which implemented API to expose core banking functionalities to internal and external systems. The API eventually morphed into Open Banking API.}
+            {Responsible for leading a squad of 10 which implemented API to expose core banking functionalities to internal and external systems. The API eventually morphed into Open Banking API.
+            There were 5 squads and I was part of the planning team of Lead Software Engineer.}
             {\cvlist{
                 \item Implementing microservice and exposing the API using Spring Boot
                 \item Measure and improve performance of the API using Gatling and JMeter
             }}
-            {\cvlist {
-                \item Java 8
-                \item Spring Boot
-                \item JHadoop
-                \item Hive
-                \item YARN
-                \item Kafka, Zookeeper
-                \item Nifi
-            }}
+            {}
             {}
 
             \vfill\null
@@ -662,11 +659,7 @@
             {\cvlist{
                 \item Implementing API using Play
             }}
-            {\cvlist {
-                \item Java 8
-                \item Play
-                \item SQL
-            }}
+            {}
             {}
 
             \vfill\null
@@ -678,10 +671,7 @@
             {\cvlist{
                 \item Implementing SPA using AngularJS
             }}
-            {\cvlist {
-                \item AngularJS
-                \item Node.js
-            }}
+            {}
             {}
 
             \vfill\null
@@ -694,10 +684,6 @@
                 \item Migrating existing applications into AWS
                 \item Making the new applications cloud-ready
             }}
-            {\cvlist {
-                \item AWS
-                \item Spring Boot
-            }}
             {}
 
             \vfill\null
@@ -708,31 +694,19 @@
             {Responsible migrating Australia Post's payment system to SecurePay's infrastructure.
             This included all online payments, IVR and operator-assisted payments.}
             {}
-            {\cvlist {
-                \item Java, Groovy
-                \item Spring Boot
-            }}
+            {}
             {}
 
             \vfill\null
             \cvevent
             {Oct 2012 – Sep 2013}
             {Team Lead @ Australia Post}
-            {FlexiPOS EFT Banking}
+            {Logistics and Banking}
             {Responsible building FlexiPOS which is an existing POS solution for low volume outlets which allow bill payments, article scanning, and postage assessments. \\
             The lack of card payment meant outlets were only allowed to accept cash or cheque as the only valid form of payment. \\
             This project enabled card payments and banking functions such as deposits to be done by relying on cloud computing solution from Quest.}
             {}
-            {\cvlist {
-                \item Groovy, Grails
-                \item Spring Security
-                \item Selenium
-                \item JMS
-                \item jQuery
-                \item Quartz
-                \item WebLogic
-                \item SVN
-            }}
+            {}
             {}
 
             \vfill\null
@@ -744,16 +718,7 @@
             The lack of card payment meant outlets were only allowed to accept cash or cheque as the only valid form of payment. \\
             This project enabled card payments and banking functions such as deposits to be done by relying on cloud computing solution from Quest.}
             {}
-            {\cvlist {
-                \item Groovy, Grails
-                \item Spring Security
-                \item Selenium
-                \item JMS
-                \item jQuery
-                \item Quartz
-                \item WebLogic
-                \item SVN
-            }}
+            {}
             {}
 
             \vfill\null
@@ -777,7 +742,7 @@
             {Nov 2008 – Jul 2011}
             {Software Engineer @ Alchemy Group Limited}
             {IT Consultant}
-            {Responsible for building applications for various clients}
+            {Responsible for building applications for various clients.}
             {\cvlist{
                 \item Assembly School Management System (www.assembly-sms.co.nz)
                 \item NZSki (www.nzski.com)
